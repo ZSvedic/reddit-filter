@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Py Debug: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Py Debug: main_ml_filter (files)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_ml_filter.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--file", 
+                "/home/zel/ml-projects/HUMOR/Reddit-data/1-threads/FollowThePunchline_threads.jsonl", 
+                "/home/zel/ml-projects/HUMOR/Reddit-data/1-threads/FollowThePunchline_threads_filtered.jsonl"
+            ]
+        },
+        {
+            "name": "Py Debug: main_ml_filter (folders)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_ml_filter.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--folder", 
+                "/home/zel/ml-projects/HUMOR/Reddit-data/1-threads/", 
+                "/home/zel/ml-projects/HUMOR/Reddit-data/2-filtered/"
+            ]
+        }
+
+    ]
+}
