@@ -8,7 +8,7 @@ https://huggingface.co/datasets/ZSvedic/humor-chains
 The dataset is created using the following procedure:
 1. **Source Data**: Used older Reddit dump [Subreddit comments/submissions 2005-06 to 2023-12](https://academictorrents.com/details/56aa49f9653ba545f48df2e33679f014d2829c10) instead of Reddit's API due to a more restrictive license (see [2023 Reddit API controversy](https://en.wikipedia.org/wiki/2023_Reddit_API_controversy)).
 2. **Subreddit Selection**: Downloaded a portion of subreddits from the [List of funny subreddits](https://www.reddit.com/r/redditlists/comments/128ayc/list_of_funny_subreddits/).
-3. **Filtering Submissions**: Python script filtered .jsonl files inside .zst to include only the most upvoted thread for each submission:
+3. **Filtering Submissions**: Python script filters .jsonl files inside .zst to include only the most upvoted thread for each submission:
    - Score >= 10 upvotes.
    - Total length < 256 characters.
    - Title is not "[deleted by user]".
