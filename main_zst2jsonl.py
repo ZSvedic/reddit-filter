@@ -22,7 +22,7 @@ def folder_get_file_triplets(root_folder, *,
     ''' Generator that yields triplets of file paths for Reddit's .ZST submissions, 
     comments and output files. '''
     for file in os.listdir(root_folder):
-        if file.endswith('submissions.zst'):
+        if file.endswith(suffix_submissions):
             sub_file_path = os.path.join(root_folder, file)
             com_file_path = sub_file_path.replace(suffix_submissions, suffix_comments)
             out_file_name = file.replace(suffix_submissions, '_threads.jsonl')

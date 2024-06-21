@@ -88,16 +88,25 @@ def create_threads(submissions_jsonl, comments_jsonl, *,
                    min_sub_score=10, min_com_score=5, max_text_len=256):
     # Load submissions and comments.
     submissions = load_submissions(submissions_jsonl, min_sub_score, max_text_len)
-    all_elem = submissions.copy()
     comments = load_comments(comments_jsonl, min_com_score, max_text_len)
-    all_elem.update(comments)
 
-    # Attach comments to corresponding parents, if they have better score.
+    # Attach comments to corresponding submissions, if they have the best score.
     for comment in comments.values():
-        parent = all_elem.get(comment['parent_id'])
+        parent = submissions.get(comment['parent_id'])
         if parent is not None:
             if comment['score'] > parent['top_child']['score']:
                 parent['top_child'] = comment
+                
+    # Old code that created full threads:
+    # all_elem = submissions.copy() # Copy submissions.
+    # all_elem.update(comments) # Add comments to the dictionary.
+
+    # # Attach comments to corresponding parents, if they have better score.
+    # for comment in comments.values():
+    #     parent = all_elem.get(comment['parent_id'])
+    #     if parent is not None:
+    #         if comment['score'] > parent['top_child']['score']:
+    #             parent['top_child'] = comment
 
     # Return only submissions with comments.
     return {id: sub for id, sub in submissions.items() if sub['top_child']['score'] > 0}
