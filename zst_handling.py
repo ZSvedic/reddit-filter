@@ -61,7 +61,7 @@ def read_zst_file(file_path, *, report_errors=True):
 
 # Test all.
 if __name__ == "__main__":
-	file_path = "/home/zel/ml-projects/HUMOR/Reddit-data/FollowThePunchline_comments.zst"
+	file_path = "/home/zel/ml-projects/HUMOR/1_reddit_data_downloads/FollowThePunchline_comments.zst"
 	processed_lines = 0
 
 	for json_line in read_zst_file(file_path):

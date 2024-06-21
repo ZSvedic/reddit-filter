@@ -2,7 +2,7 @@ import reddit_json
 import zst_handling
 import os
 
-def zst2jsonl(root='/home/zel/ml-projects/HUMOR/Reddit-data/'):
+def zst2jsonl(root='/home/zel/ml-projects/HUMOR/1_reddit_data_downloads/'):
     for sub_file, com_file, out_file in folder_get_file_triplets(root):
         print(f'\nSubmissions: {sub_file}\n   Comments: {com_file}')
         if os.path.exists(out_file):
