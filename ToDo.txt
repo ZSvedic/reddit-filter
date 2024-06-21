@@ -1,10 +1,10 @@
 TODO:
-- Figure out how to create a HuggingFace dataset.
-- Filter funny ones.
-- Create a final dataset.
-- Upload to HF.
 
 DONE:
++ Figure out how to create a HuggingFace dataset.
++ Filter funny ones.
++ Create a final dataset.
++ Upload to HF.
 + Process ZST files directly.
 + Process all ZST in a folder.
 + Write output JSONL file.
