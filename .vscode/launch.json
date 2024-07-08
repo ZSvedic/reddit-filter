@@ -19,8 +19,8 @@
             "console": "integratedTerminal",
             "args": [
                 "--file", 
-                "/home/zel/ml-projects/HUMOR/Reddit-data/1-threads/FollowThePunchline_threads.jsonl", 
-                "/home/zel/ml-projects/HUMOR/Reddit-data/1-threads/FollowThePunchline_threads_filtered.jsonl"
+                "/home/zel/ml-projects/HUMOR/1_reddit_data_downloads/1-threads/FollowThePunchline_threads.jsonl", 
+                "/home/zel/ml-projects/HUMOR/1_reddit_data_downloads/1-threads/FollowThePunchline_threads_filtered.jsonl"
             ]
         },
         {
@@ -31,8 +31,8 @@
             "console": "integratedTerminal",
             "args": [
                 "--folder", 
-                "/home/zel/ml-projects/HUMOR/Reddit-data/1-threads/", 
-                "/home/zel/ml-projects/HUMOR/Reddit-data/2-filtered/"
+                "/home/zel/ml-projects/HUMOR/1_reddit_data_downloads/1-threads/", 
+                "/home/zel/ml-projects/HUMOR/1_reddit_data_downloads/2-filtered/"
             ]
         }
 
